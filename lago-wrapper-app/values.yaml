@@ -164,9 +164,6 @@ tolerations: []
 affinity: {}
 
 postgresql:
-  global:
-    security:
-      allowInsecureImages: true
   image:
     registry: docker.io
     repository: getlago/postgres-partman
