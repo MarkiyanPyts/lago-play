@@ -180,7 +180,7 @@ lago:
     lago:
       signup: true
     urls:
-      api: "http://localhost:3001/api"
+      api: "http://localhost:3001"
       front: "http://localhost:3000"
 
     database:
