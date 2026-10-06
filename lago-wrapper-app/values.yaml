@@ -169,6 +169,10 @@ postgresql:
     password: password
     database: lago
 
+redis:
+  auth:
+    enabled: false
+
 lago:
   global:
     urls:
