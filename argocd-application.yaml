@@ -6,8 +6,8 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/MarkiyanPyts/lago-play.git
-    targetRevision: HEAD
+    repoURL: https://github.com/MarkiyanPyts/lago-play
+    targetRevision: main
     path: lago-wrapper-app
     helm:
       releaseName: lago-wrapper-app
