@@ -26,10 +26,6 @@ https://artifacthub.io/packages/helm/bitnami/redis?modal=install
 Had to use https://hub.docker.com/layers/getlago/postgres-partman/latest image that lago uses in their own test setup, lago-wrapper-app/templates/postgresql.yaml has it.
 
 
-
-
-
-
 # Secrets
 The following secrets in values is generated as per `https://getlago.com/docs/guide/lago-self-hosted/kubernetes`
 
@@ -71,9 +67,25 @@ e.g
 `kubectl port-forward svc/lago-wrapper-app-lago-front 3000:80 -n lago-ns`
 
 # Database migrations note
-Currently migration flag is true for lago, in prod it should be false and migration should be something handled manually
+You need to manually run database migration job
 
 ```
-  migrate:
-    enabled: true
+kubectl exec -n lago-ns deployment/lago-wrapper-app-lago-api -- bundle exec rails db:migrate
+```
+
+## Command explanation:
+
+| Part | Explanation |
+|------|-------------|
+| `kubectl exec` | Run a command inside a running container |
+| `-n lago-ns` | In the `lago-ns` namespace |
+| `deployment/lago-wrapper-app-lago-api` | Target the API deployment (kubectl picks one of its pods automatically) |
+| `--` | Separator — everything after this is the command to run inside the container |
+| `bundle exec` | Run the following command using the exact gem versions defined in `Gemfile.lock` |
+| `rails db:migrate` | Rails task that runs all pending database migrations |
+
+# Port Forward Lago FE and API
+```
+kubectl port-forward svc/lago-wrapper-app-lago-api 3001:80 -n lago-ns
+kubectl port-forward svc/lago-wrapper-app-lago-front 3000:80 -n lago-ns
 ```
