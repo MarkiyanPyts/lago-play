@@ -40,7 +40,7 @@ https://argo-cd.readthedocs.io/en/stable/getting_started/
 kubectl port-forward svc/argocd-server -n argocd 8080:443
 ```
 
-Also login using CLI as described in that link
+Also login using CLI as described in that link and access ArgoCD UI to see apps
 
 
 ## Apply Argocd App(in argo namespace)
