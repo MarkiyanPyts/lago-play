@@ -2,5 +2,8 @@ dependencies:
 - name: lago
   repository: https://charts.getlago.com
   version: 2.0.0
-digest: sha256:3cea9b09fa9df3caedfc1e708e66f8c4079e5fe7c81dbcef62aea968f407b7f0
-generated: "2026-10-06T15:36:16.105175+03:00"
+- name: postgresql
+  repository: oci://registry-1.docker.io/bitnamicharts
+  version: 12.6.9
+digest: sha256:2f2054f6af5e00152a46e9f6fa3ffe6683c9cea991dcfbbc8e8c99c98569fb55
+generated: "2026-10-06T17:02:00.403922+03:00"
