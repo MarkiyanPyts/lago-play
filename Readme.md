@@ -60,3 +60,11 @@ kubectl port-forward svc/<lago-frontend-service-name> 3000:80 -n lago-ns
 
 e.g 
 `kubectl port-forward svc/lago-wrapper-app-lago-front 3000:80 -n lago-ns`
+
+# Database migrations note
+Currently migration flag is true for lago, in prod it should be false and migration should be something handled manually
+
+```
+  migrate:
+    enabled: true
+```

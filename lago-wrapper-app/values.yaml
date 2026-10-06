@@ -175,6 +175,8 @@ redis:
     password: "lagoredis"
 
 lago:
+  migrate:
+    enabled: true
   global:
     urls:
       api: "http://localhost:3001"
