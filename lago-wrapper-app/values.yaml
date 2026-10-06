@@ -163,6 +163,12 @@ tolerations: []
 
 affinity: {}
 
+postgresql:
+  auth:
+    username: lago
+    password: password
+    database: lago
+
 lago:
   global:
     urls:
@@ -170,7 +176,7 @@ lago:
       front: "http://localhost:3000/frontend"
 
     database:
-      uri: "postgres://lago:password@postgres.example.com:5432/lago"
+      uri: "postgres://lago:password@lago-wrapper-app-postgresql.lago-ns.svc.cluster.local:5432/lago"
 
     redis:
       uri: "redis://redis.example.com:6379"

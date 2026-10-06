@@ -31,3 +31,22 @@ The following secrets in values is generated as per `https://getlago.com/docs/gu
       hmac: "+q1OyAJUB0ytlWeHFuzhnw=="
 ```
 Don't use it in prod it's just for local testing
+
+# Install AgroCD
+https://argo-cd.readthedocs.io/en/stable/getting_started/
+
+## Port Forward ArgoCD to run locally(as per above link)
+```
+kubectl port-forward svc/argocd-server -n argocd 8080:443
+```
+
+Also login using CLI as described in that link
+
+
+## Apply Argocd App(in argo namespace)
+`kubectl apply -f argocd-application.yaml`
+
+```
+kubectl create namespace argocd
+kubectl apply -n argocd --server-side --force-conflicts -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+```

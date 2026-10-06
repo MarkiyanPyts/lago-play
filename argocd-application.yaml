@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: lago-wrapper-app
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/MarkiyanPyts/lago-play.git
+    targetRevision: HEAD
+    path: lago-wrapper-app
+    helm:
+      releaseName: lago-wrapper-app
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: lago-ns
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
