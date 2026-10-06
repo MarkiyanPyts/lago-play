@@ -177,8 +177,8 @@ lago:
   migrate:
     enabled: false
   global:
-    signup:
-      enabled: true
+    lago:
+      signup: true
     urls:
       api: "http://localhost:3001"
       front: "http://localhost:3000"
