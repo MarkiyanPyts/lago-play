@@ -45,8 +45,3 @@ Also login using CLI as described in that link and access ArgoCD UI to see apps
 
 ## Apply Argocd App(in argo namespace)
 `kubectl apply -f argocd-application.yaml`
-
-```
-kubectl create namespace argocd
-kubectl apply -n argocd --server-side --force-conflicts -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
-```
