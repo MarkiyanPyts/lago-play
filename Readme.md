@@ -70,8 +70,20 @@ e.g
 You need to manually run database migration job
 
 ```
-kubectl exec -n lago-ns deployment/lago-wrapper-app-lago-api -- bundle exec rails db:migrate
+kubectl exec -n lago-ns deployment/lago-wrapper-app-lago-api -- bundle exec rake db:create 2>&1 | tail -5
+
+kubectl exec -n lago-ns deployment/lago-wrapper-app-lago-api -- bundle exec rails db:migrate 2>&1 | tail -10
+
+kubectl exec -n lago-ns deployment/lago-wrapper-app-lago-api -- bundle exec rails roles:seed_predefined 2>&1
 ```
+
+or 
+
+```
+kubectl exec -n lago-ns deployment/lago-wrapper-app-lago-api -- bash scripts/migrate.sh
+```
+
+related issue: https://github.com/getlago/lago/issues/708
 
 ## Command explanation:
 
