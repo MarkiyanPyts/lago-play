@@ -178,7 +178,7 @@ lago:
   global:
     urls:
       api: "http://localhost:3001"
-      front: "http://localhost:3000,http://127.0.0.1:3000"
+      front: "http://localhost:3000"
 
     database:
       uri: "postgres://lago:password@lago-wrapper-app-postgresql.lago-ns.svc.cluster.local:5432/lago"
