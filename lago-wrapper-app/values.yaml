@@ -179,11 +179,11 @@ lago:
       uri: "postgres://lago:password@lago-wrapper-app-postgresql.lago-ns.svc.cluster.local:5432/lago"
 
     redis:
-      uri: "redis://redis.example.com:6379"
+      uri: "redis://lago-wrapper-app-redis-master.lago-ns.svc.cluster.local:6379"
     redisCache:
-      uri: "redis://redis.example.com:6379"
+      uri: "redis://lago-wrapper-app-redis-master.lago-ns.svc.cluster.local:6379"
     redisStore:
-      uri: "redis://redis.example.com:6379"
+      uri: "redis://lago-wrapper-app-redis-master.lago-ns.svc.cluster.local:6379"
 
     # WARNING: generate once and never change — changing these makes encrypted data unreadable
     # Generate with: openssl rand -hex 16

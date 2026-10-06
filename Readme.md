@@ -16,6 +16,11 @@ helm repo update
 helm dependency update lago-wrapper-app
 ```
 
+# Other Dependency Charts App Contains
+https://artifacthub.io/packages/helm/bitnami/postgresql/18.12.4?modal=install
+https://artifacthub.io/packages/helm/bitnami/redis?modal=install
+
+
 # Secrets
 The following secrets in values is generated as per `https://getlago.com/docs/guide/lago-self-hosted/kubernetes`
 
