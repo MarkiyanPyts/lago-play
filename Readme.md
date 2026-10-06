@@ -13,7 +13,7 @@ helm create lago-wrapper-app
 # Install Lago Dependency
 ```
 helm repo update
-helm dependency update lago-wrapper-app/
+helm dependency update lago-wrapper-app
 ```
 
 # Secrets
