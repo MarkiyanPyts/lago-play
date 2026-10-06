@@ -184,7 +184,7 @@ redis:
 
 lago:
   migrate:
-    enabled: true
+    enabled: false
   global:
     urls:
       api: "http://localhost:3001"
