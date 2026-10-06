@@ -18,10 +18,16 @@ helm dependency update lago-wrapper-app
 
 # Other Dependency Charts App Contains
 
-https://hub.docker.com/layers/getlago/postgres-partman/latest
+
 https://artifacthub.io/packages/helm/bitnami/redis?modal=install
 
-> Note partman extension is required in Postgres, https://artifacthub.io/packages/helm/bitnami/postgresql/18.12.4?modal=install does not have it out of the box so I could not use it for local testing
+> Note partman extension is required in Postgres https://artifacthub.io/packages/helm/bitnami/postgresql/18.12.4?modal=install so this chart count not be used, 
+
+Had to use https://hub.docker.com/layers/getlago/postgres-partman/latest image that lago uses in their own test setup, lago-wrapper-app/templates/postgresql.yaml has it.
+
+
+
+
 
 
 # Secrets

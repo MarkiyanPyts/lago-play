@@ -163,19 +163,10 @@ tolerations: []
 
 affinity: {}
 
-global:
-  security:
-    allowInsecureImages: true
-
 postgresql:
-  image:
-    registry: docker.io
-    repository: getlago/postgres-partman
-    tag: "15.0-alpine"
-  auth:
-    username: lago
-    password: password
-    database: lago
+  username: lago
+  password: password
+  database: lago
 
 redis:
   auth:
