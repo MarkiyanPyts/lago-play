@@ -164,6 +164,10 @@ tolerations: []
 affinity: {}
 
 postgresql:
+  image:
+    registry: docker.io
+    repository: getlago/postgres-partman
+    tag: "15.0-alpine"
   auth:
     username: lago
     password: password
