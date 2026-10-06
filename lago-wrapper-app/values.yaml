@@ -177,8 +177,8 @@ redis:
 lago:
   global:
     urls:
-      api: "http://localhost:3000/api"
-      front: "http://localhost:3000/frontend"
+      api: "http://localhost:3001"
+      front: "http://localhost:3000"
 
     database:
       uri: "postgres://lago:password@lago-wrapper-app-postgresql.lago-ns.svc.cluster.local:5432/lago"
