@@ -45,3 +45,13 @@ Also login using CLI as described in that link and access ArgoCD UI to see apps
 
 ## Apply Argocd App(in argo namespace)
 `kubectl apply -f argocd-application.yaml`
+
+## After Lago Is Deployed Port Forward it to localhost
+```
+kubectl get services -n lago-ns
+
+kubectl port-forward svc/<lago-frontend-service-name> 3000:80 -n lago-ns
+```
+
+e.g 
+`kubectl port-forward svc/lago-wrapper-app-lago-front 3000:80 -n lago-ns`
