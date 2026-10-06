@@ -9,3 +9,9 @@ kubectl apply -f namespace.yaml
 ```
 helm create lago-wrapper-app
 ```
+
+# Install Lago Dependency
+```
+helm repo update
+helm dependency update lago-wrapper-app/
+```
